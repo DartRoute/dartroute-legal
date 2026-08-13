@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dart Route — Polityka prywatności / Privacy Policy</title>
+<meta name="description" content="Polityka prywatności aplikacji Dart Route. Privacy policy for the Dart Route app.">
+<style>
+:root{
+  --board:#0F1C14;
+  --felt:#17281D;
+  --felt-up:#1F3527;
+  --brass:#D9B96C;
+  --brass-deep:#D1AF5F;
+  --brass-muted:#8C7A4B;
+  --chalk:#F3EEDD;
+  --chalk-muted:#B9C2B4;
+  --hairline:rgba(255,255,255,.08);
+  --red:#C4362F;
+  --green:#3C8C5B;
+
+  --serif: ui-serif, "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  --sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --mono: ui-monospace, "SF Mono", "Cascadia Mono", Menlo, Consolas, monospace;
+}
+
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  background:var(--board);
+  color:var(--chalk);
+  font-family:var(--sans);
+  font-size:17px;
+  line-height:1.65;
+}
+
+.wrap{max-width:46rem;margin:0 auto;padding:3.5rem 1.5rem 5rem}
+
+/* --- Nagłówek --- */
+.masthead{border-bottom:1px solid var(--brass-muted);padding-bottom:1.75rem;margin-bottom:2.5rem}
+.eyebrow{
+  font-family:var(--mono);font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--brass-muted);margin:0 0 .9rem
+}
+h1{
+  font-family:var(--serif);font-weight:600;font-size:clamp(2rem,6vw,2.9rem);
+  line-height:1.1;margin:0 0 .6rem;letter-spacing:-.015em
+}
+.sub{color:var(--chalk-muted);margin:0;font-size:.95rem}
+
+/* --- Przełącznik języka --- */
+.langbar{display:flex;gap:.4rem;margin-bottom:2rem}
+.langbar button{
+  font-family:var(--mono);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;
+  background:transparent;color:var(--chalk-muted);border:1px solid var(--hairline);
+  border-radius:2px;padding:.45rem .85rem;cursor:pointer
+}
+.langbar button[aria-pressed="true"]{background:var(--brass);color:#231703;border-color:var(--brass)}
+.langbar button:focus-visible{outline:2px solid var(--brass);outline-offset:2px}
+
+/* --- Karta podsumowania --- */
+.scorecard{
+  background:var(--felt);border:1px solid var(--hairline);border-left:3px solid var(--brass);
+  padding:1.4rem 1.5rem;margin:0 0 3rem
+}
+.scorecard h2{
+  font-family:var(--mono);font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--brass);margin:0 0 1rem;font-weight:600
+}
+.scorecard dl{margin:0;display:grid;grid-template-columns:minmax(9rem,auto) 1fr;gap:.55rem 1.25rem}
+.scorecard dt{font-size:.88rem;color:var(--chalk-muted)}
+.scorecard dd{margin:0;font-size:.88rem}
+.tick{color:var(--green);font-family:var(--mono)}
+.cross{color:var(--red);font-family:var(--mono)}
+@media (max-width:32rem){
+  .scorecard dl{grid-template-columns:1fr;gap:.15rem}
+  .scorecard dd{margin-bottom:.7rem}
+}
+
+/* --- Sekcje --- */
+section{margin-bottom:2.75rem;scroll-margin-top:1rem}
+h2.head{
+  font-family:var(--serif);font-size:1.35rem;font-weight:600;line-height:1.25;
+  margin:0 0 .85rem;color:var(--chalk);display:flex;gap:.75rem;align-items:baseline
+}
+h2.head .num{
+  font-family:var(--mono);font-size:.72rem;color:var(--brass);letter-spacing:.08em;
+  flex:0 0 auto;padding-top:.15rem
+}
+h3{font-family:var(--sans);font-size:1rem;font-weight:600;margin:1.5rem 0 .5rem;color:var(--brass)}
+p{margin:0 0 .9rem}
+ul{margin:0 0 .9rem;padding-left:1.15rem}
+li{margin-bottom:.4rem}
+strong{color:#fff;font-weight:600}
+a{color:var(--brass);text-decoration-thickness:1px;text-underline-offset:.15em}
+code{font-family:var(--mono);font-size:.85em;color:var(--brass-deep);background:var(--felt);padding:.1em .35em;border-radius:2px}
+
+.note{
+  background:var(--felt-up);border:1px solid var(--hairline);padding:1rem 1.15rem;
+  font-size:.92rem;margin:1.2rem 0
+}
+.note p:last-child{margin-bottom:0}
+
+footer{
+  border-top:1px solid var(--hairline);margin-top:3.5rem;padding-top:1.5rem;
+  font-size:.85rem;color:var(--chalk-muted)
+}
+
+[hidden]{display:none !important}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="masthead">
+    <p class="eyebrow">Dart Route</p>
+    <h1 data-pl="Polityka prywatności" data-en="Privacy Policy">Polityka prywatności</h1>
+    <p class="sub">
+      <span data-pl="Ostatnia aktualizacja: 13.08.2026" data-en="Last updated: 13 August 2026">Ostatnia aktualizacja: 13.08.2026</span>
+    </p>
+  </header>
+
+  <div class="langbar">
+    <button type="button" id="btn-pl" aria-pressed="true">Polski</button>
+    <button type="button" id="btn-en" aria-pressed="false">English</button>
+  </div>
+
+  <!-- ================= POLSKI ================= -->
+  <div id="pl">
+
+    <div class="scorecard">
+      <h2>Dane w skrócie</h2>
+      <dl>
+        <dt>Konto i logowanie</dt>
+        <dd>Adres e-mail i nazwa wyświetlana — tylko jeśli założysz konto</dd>
+
+        <dt>Mecze i zawodnicy</dt>
+        <dd>Wyniki, statystyki i profile zawodników, które sam wprowadzasz</dd>
+
+        <dt>Aparat</dt>
+        <dd><span class="tick">✓</span> obraz przetwarzany na urządzeniu, nie jest zapisywany ani wysyłany</dd>
+
+        <dt>Mikrofon</dt>
+        <dd>Rozpoznawanie mowy realizuje usługa systemowa Androida — mowa trafia do jej dostawcy</dd>
+
+        <dt>Reklamy i profilowanie</dt>
+        <dd><span class="cross">✕</span> nie prowadzimy</dd>
+
+        <dt>Sprzedaż danych</dt>
+        <dd><span class="cross">✕</span> nie sprzedajemy i nie udostępniamy w celach marketingowych</dd>
+
+        <dt>Gra bez konta</dt>
+        <dd><span class="tick">✓</span> dane zostają wyłącznie na urządzeniu</dd>
+      </dl>
+    </div>
+
+    <section>
+      <h2 class="head"><span class="num">01</span><span>Administrator danych</span></h2>
+      <p>
+        Administratorem danych osobowych przetwarzanych w aplikacji <strong>Dart Route</strong> jest
+        Mateusz Szczygieł, [MIASTO, KRAJ]. Kontakt: <strong>kontakt@fipex.pl</strong>.
+      </p>
+      <p>
+        Polityka wyjaśnia, jakie dane Aplikacja zbiera, po co, komu je powierza i jak można je usunąć.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="head"><span class="num">02</span><span>Jakie dane przetwarzamy</span></h2>
+
+      <h3>Dane konta — tylko jeśli je założysz</h3>
+      <p>
+        Adres e-mail, nazwa wyświetlana, identyfikator użytkownika nadany przez Firebase Authentication
+        oraz hasło przechowywane w postaci zaszyfrowanej przez Firebase. <strong>Administrator nie ma
+        dostępu do hasła i nie może go odczytać.</strong>
+      </p>
+
+      <h3>Dane wprowadzane w Aplikacji</h3>
+      <p>
+        Profile zawodników (nazwa, pseudonim, kraj, data urodzenia, oznaczenie profilu własnego),
+        wyniki meczów X01 i cricket (data, tryb gry, wygrane legi i sety, średnia, procent checkoutów,
+        liczba rzutów 180/140+/100+/80+/60+/40+, najwyższy checkout, liczba lotek, poziom trudności
+        przeciwnika komputerowego), wyniki turniejów i kariery (sezony, dywizje, przeciwnicy, nagrody)
+        oraz ustawienia Aplikacji.
+      </p>
+
+      <h3>Obraz z aparatu i dźwięk z mikrofonu</h3>
+      <p>
+        Przetwarzane wyłącznie na czas trwania funkcji, która ich potrzebuje. Aplikacja nie zapisuje
+        ani nie wysyła zdjęć, nagrań wideo ani nagrań dźwiękowych — szczegóły w punktach 5 i 6.
+      </p>
+
+      <h3>Dane techniczne</h3>
+      <p>
+        Informacje niezbędne do działania synchronizacji, przetwarzane przez dostawcę infrastruktury
+        (m.in. adres IP, czas żądania).
+      </p>
+
+      <div class="note">
+        <p>
+          <strong>Czego nie zbieramy:</strong> lokalizacji, kontaktów, zdjęć z galerii ani identyfikatorów
+          reklamowych. Aplikacja nie wyświetla reklam i nie profiluje użytkowników do celów marketingowych.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="head"><span class="num">03</span><span>Tryb bez konta</span></h2>
+      <p>
+        Jeżeli korzystasz z Aplikacji bez konta, wszystkie dane pozostają wyłącznie w pamięci Twojego
+        urządzenia, w prywatnym katalogu Aplikacji. Nie są wysyłane na żadne serwery i Administrator
+        nie ma do nich dostępu.
+      </p>
+      <p>
+        Dopiero zalogowanie się i wyrażenie zgody w oknie „Przenieść dane z tego urządzenia?" powoduje
+        przypisanie tych danych do konta i objęcie ich synchronizacją.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="head"><span class="num">04</span><span>Cele i podstawy prawne</span></h2>
+      <ul>
+        <li>
+          <strong>Świadczenie usługi</strong> — prowadzenie konta, zapisywanie wyników, synchronizacja
+          między urządzeniami: art. 6 ust. 1 lit. b RODO (wykonanie umowy).
+        </li>
+        <li>
+          <strong>Dostęp do aparatu i mikrofonu</strong> — rozpoznawanie rzutów i sterowanie głosem:
+          art. 6 ust. 1 lit. a RODO (zgoda wyrażana w oknie uprawnień systemu Android, możliwa do
+          cofnięcia w każdej chwili).
+        </li>
+        <li>
+          <strong>Bezpieczeństwo usługi</strong> — zapobieganie nadużyciom, obsługa zgłoszeń
+          i reklamacji: art. 6 ust. 1 lit. f RODO (prawnie uzasadniony interes).
+        </li>
+        <li>
+          <strong>Obowiązki ustawowe</strong> — art. 6 ust. 1 lit. c RODO.
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 class="head"><span class="num">05</span><span>Aparat</span></h2>
+      <p>
+        Aparat służy wyłącznie do rozpoznawania trafień na tarczy. Obraz jest analizowany na bieżąco,
+        w pamięci urządzenia, i <strong>nie opuszcza telefonu</strong>: klatki nie są zapisywane do
+        pamięci trwałej, nie trafiają do galerii ani do chmury. Do Aplikacji trafiają wyłącznie
+        odczytane wartości punktowe.
+      </p>
+      <p>
+        Uprawnienie jest opcjonalne — Aplikacja poprosi o nie dopiero przy pierwszym użyciu tej funkcji,
+        a odmowa nie blokuje pozostałych możliwości. Zgodę można cofnąć w Ustawieniach systemu Android.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="head"><span class="num">06</span><span>Mikrofon i rozpoznawanie mowy</span></h2>
+      <p>
+        Mikrofon służy do głosowego podawania wyników. Aplikacja korzysta z systemowego mechanizmu
+        rozpoznawania mowy Androida — <strong>nie prowadzi własnego rozpoznawania i nie nagrywa dźwięku
+        do pliku</strong>.
+      </p>
+      <p>
+        Ma to konsekwencję, o której informujemy wprost: na większości urządzeń usługę rozpoznawania
+        mowy dostarcza Google lub producent telefonu i <strong>usługa ta może przesłać nagranie
+        wypowiedzi na własne serwery</strong>, aby zamienić je na tekst. Odbywa się to poza kontrolą
+        Administratora i podlega polityce prywatności dostawcy tej usługi. Do Aplikacji wraca wyłącznie
+        rozpoznany tekst, z którego odczytywane są liczby.
+      </p>
+      <p>
+        Jeżeli nie chcesz, aby tak było, nie udzielaj uprawnienia do mikrofonu lub cofnij je
+        w Ustawieniach systemu — wyniki wpiszesz wtedy ręcznie. Część urządzeń pozwala też włączyć
+        rozpoznawanie mowy działające offline; wówczas dźwięk nie opuszcza telefonu.
+      </p>
+      <p>
+        Aby sprawdzić, czy rozpoznawanie mowy jest w ogóle dostępne, Aplikacja odpytuje system o obecność
+        takiej usługi. Nie odczytuje przy tym listy zainstalowanych aplikacji ani żadnych innych
+        informacji o urządzeniu.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="head"><span class="num">07</span><span>Co trafia do chmury, a co zostaje na urządzeniu</span></h2>
+      <p>
+        Na konto w chmurze wysyłane są profile zawodników oraz podsumowania meczów (statystyki
+        wymienione w punkcie 2).
+      </p>
+      <p>
+        Na urządzeniu pozostają: szczegółowy przebieg rzutów w meczach X01 i cricket, obraz z aparatu,
+        dźwięk z mikrofonu oraz ustawienia Aplikacji. Oznacza to, że mecz pobrany na drugim urządzeniu
+        zawiera wynik i statystyki, ale nie zawiera zapisu poszczególnych wizyt.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="head"><span class="num">08</span><span>Odbiorcy danych</span></h2>
+      <p>
+        Dane użytkowników posiadających konto są powierzone Google Ireland Limited (Gordon House,
+        Barrow Street, Dublin 4, Irlandia) i Google LLC w ramach usług Firebase Authentication oraz
+        Cloud Firestore, działających jako podmiot przetwarzający na polecenie Administratora.
+      </p>
+      <p>
+        Odrębnym odbiorcą jest dostawca systemowej usługi rozpoznawania mowy (zwykle Google lub
+        producent urządzenia), który przetwarza wypowiedź użytkownika na własnych zasadach, jako
+        niezależny administrator — opisuje to punkt 6.
+      </p>
+      <p>
+        Dane mogą być przekazywane poza Europejski Obszar Gospodarczy na podstawie standardowych klauzul
+        umownych zatwierdzonych przez Komisję Europejską oraz innych mechanizmów przewidzianych
+        w rozdziale V RODO.
+      </p>
+      <p><strong>Dane nie są sprzedawane ani udostępniane w celach marketingowych.</strong></p>
+    </section>
+
+    <section>
+      <h2 class="head"><span class="num">09</span><span>Okres przechowywania</span></h2>
+      <p>
+        Dane konta i dane zsynchronizowane przechowujemy do czasu usunięcia konta przez użytkownika.
+        Historię meczów możesz wyczyścić wcześniej w <strong>Ustawienia → Dane</strong> — usunięte mecze
+        znikają z Aplikacji, a informacja o usunięciu jest przekazywana do chmury przy najbliższej
+        synchronizacji, aby nie wróciły na inne urządzenia.
+      </p>
+      <p>
+        Dane przechowywane wyłącznie lokalnie (tryb bez konta) istnieją tak długo, jak długo Aplikacja
+        jest zainstalowana. Automatyczna kopia zapasowa Androida jest dla Aplikacji wyłączona
+        (<code>allowBackup="false"</code>), więc jej dane nie trafiają do kopii zapasowej konta Google.
+      </p>
+      <p>Obraz z aparatu i dźwięk z mikrofonu nie są przechowywane w ogóle.</p>
+    </section>
+
+    <section>
+      <h2 class="head"><span class="num">10</span><span>Usunięcie danych</span></h2>
+      <p>
+        <strong>Ustawienia → Konto → Usuń konto</strong> uruchamia trwałe usunięcie danych z chmury
+        (dokumenty zawodników i meczów), skasowanie danych z pamięci urządzenia oraz usunięcie konta
+        z Firebase Authentication. Operacja wymaga podania hasła i jest nieodwracalna.
+      </p>
+      <p>
+        Jeżeli nie masz już dostępu do Aplikacji, napisz na <strong>kontakt@fipex.pl</strong> z adresu,
+        na który konto jest zarejestrowane — usuniemy je w ciągu 30 dni.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="head"><span class="num">11</span><span>Twoje prawa</span></h2>
+      <p>
+        Przysługuje Ci prawo dostępu do danych, ich sprostowania, usunięcia, ograniczenia przetwarzania,
+        przenoszenia danych, sprzeciwu wobec przetwarzania opartego na prawnie uzasadnionym interesie
+        oraz cofnięcia zgody w dowolnym momencie — bez wpływu na zgodność z prawem przetwarzania
+        dokonanego wcześniej.
+      </p>
+      <p>
+        Większość z tych praw możesz zrealizować samodzielnie w Aplikacji (edycja profili, czyszczenie
+        historii, usunięcie konta, cofnięcie uprawnień do aparatu i mikrofonu). W pozostałych przypadkach
+        napisz na <strong>kontakt@fipex.pl</strong>.
+      </p>
+      <p>
+        Masz również prawo wniesienia skargi do Prezesa Urzędu Ochrony Danych Osobowych,
+        ul. Stawki 2, 00-193 Warszawa.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="head"><span class="num">12</span><span>Dane innych osób</span></h2>
+      <p>
+        Tworząc profile przeciwników i partnerów, wprowadzasz dane innych osób. Rób to tylko wtedy, gdy
+        masz do tego podstawę, i ogranicz się do informacji niezbędnych — wystarczy sama nazwa lub
+        pseudonim, data urodzenia jest opcjonalna. Nie wprowadzaj danych szczególnych kategorii,
+        np. dotyczących zdrowia.
+      </p>
+      <p>Kierując aparat na tarczę, uważaj, aby nie rejestrować osób postronnych.</p>
+    </section>
+
+    <section>
+      <h2 class="head"><span class="num">13</span><span>Dzieci</span></h2>
+      <p>
+        Aplikacja nie jest kierowana do dzieci poniżej 16 lat. Osoba poniżej tego wieku może korzystać
+        z konta wyłącznie za zgodą i pod nadzorem opiekuna prawnego. Tryb bez konta nie wymaga podawania
+        żadnych danych kontaktowych.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="head"><span class="num">14</span><span>Bezpieczeństwo</span></h2>
+      <p>
+        Połączenia z chmurą są szyfrowane (TLS). Reguły bezpieczeństwa Firestore ograniczają dostęp do
+        dokumentów wyłącznie do właściciela konta. Hasła przechowuje i weryfikuje Firebase
+        Authentication. Dane lokalne znajdują się w prywatnym katalogu Aplikacji, niedostępnym dla
+        innych aplikacji.
+      </p>
+      <p>
+        Żadne zabezpieczenie nie daje stuprocentowej gwarancji — zadbaj o silne, unikalne hasło
+        i blokadę ekranu urządzenia.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="head"><span class="num">15</span><span>Uprawnienia Aplikacji</span></h2>
+      <ul>
+        <li>
+          <strong>Internet</strong> — logowanie, synchronizacja i rozpoznawanie mowy. Wymagane tylko
+          przy korzystaniu z konta; tryb bez konta działa offline.
+        </li>
+        <li><strong>Aparat</strong> — rozpoznawanie trafień na tarczy (punkt 5). Opcjonalne.</li>
+        <li><strong>Mikrofon</strong> — głosowe podawanie wyników (punkt 6). Opcjonalne.</li>
+        <li>
+          <strong>Wibracje</strong> — odczucia dotykowe przy trafieniach i błędach; można je wyłączyć
+          w Ustawienia → Dźwięk.
+        </li>
+      </ul>
+      <p>
+        O każde uprawnienie Aplikacja prosi dopiero w chwili pierwszego użycia danej funkcji. Odmowa
+        nie blokuje pozostałych możliwości, a udzieloną zgodę można w każdej chwili cofnąć
+        w Ustawieniach systemu Android.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="head"><span class="num">16</span><span>Zmiany Polityki i kontakt</span></h2>
+      <p>
+        Polityka może być aktualizowana wraz z rozwojem Aplikacji. O istotnych zmianach poinformujemy
+        w Aplikacji. Aktualna wersja jest zawsze dostępna w Ustawieniach oraz pod tym adresem.
+      </p>
+      <p>Kontakt w sprawach danych osobowych: <strong>kontakt@fipex.pl</strong>.</p>
+    </section>
+
+  </div>
+
+  <!-- ================= ENGLISH ================= -->
+  <div id="en" hidden>
+
+    <div class="scorecard">
+      <h2>Data at a glance</h2>
+      <dl>
+        <dt>Account</dt>
+        <dd>Email address and display name — only if you create an account</dd>
+
+        <dt>Matches and players</dt>
+        <dd>Scores, statistics and player profiles you enter yourself</dd>
+
+        <dt>Camera</dt>
+        <dd><span class="tick">✓</span> processed on your device, never stored or uploaded</dd>
+
+        <dt>Microphone</dt>
+        <dd>Speech recognition is handled by Android's system service — your speech reaches its provider</dd>
+
+        <dt>Ads and profiling</dt>
+        <dd><span class="cross">✕</span> none</dd>
+
+        <dt>Selling data</dt>
+        <dd><span class="cross">✕</span> never sold or shared for marketing</dd>
+
+        <dt>Playing without an account</dt>
+        <dd><span class="tick">✓</span> data stays on your device only</dd>
+      </dl>
+    </div>
+
+    <section>
+      <h2 class="head"><span class="num">01</span><span>Data controller</span></h2>
+      <p>
+        The controller of personal data processed in the <strong>Dart Route</strong> app is
+        Mateusz Szczygieł, [MIASTO, KRAJ]. Contact: <strong>kontakt@fipex.pl</strong>.
+      </p>
+      <p>
+        This policy explains what data the app collects, why, who it is entrusted to, and how it can be deleted.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="head"><span class="num">02</span><span>What data we process</span></h2>
+
+      <h3>Account data — only if you create an account</h3>
+      <p>
+        Email address, display name, the user identifier assigned by Firebase Authentication, and a password
+        stored in encrypted form by Firebase. <strong>The controller has no access to your password and cannot
+        read it.</strong>
+      </p>
+
+      <h3>Data you enter in the app</h3>
+      <p>
+        Player profiles (name, nickname, country, date of birth, own-profile marker), X01 and cricket match
+        results (date, game mode, legs and sets won, average, checkout percentage, counts of 180/140+/100+/80+/60+/40+
+        scores, highest checkout, darts thrown, computer opponent difficulty), tournament and career results
+        (seasons, divisions, opponents, awards), and app settings.
+      </p>
+
+      <h3>Camera imagery and microphone audio</h3>
+      <p>
+        Processed only for as long as the feature that needs them is running. The app stores and uploads no
+        photos, video or audio recordings — see sections 5 and 6.
+      </p>
+
+      <h3>Technical data</h3>
+      <p>
+        Information required for synchronisation to work, processed by the infrastructure provider
+        (including IP address and request time).
+      </p>
+
+      <div class="note">
+        <p>
+          <strong>What we don't collect:</strong> location, contacts, gallery photos or advertising identifiers.
+          The app shows no ads and does not profile users for marketing.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="head"><span class="num">03</span><span>Using the app without an account</span></h2>
+      <p>
+        If you use the app without an account, all data stays solely in your device's memory, in the app's
+        private directory. Nothing is sent to any server and the controller has no access to it.
+      </p>
+      <p>
+        Only signing in and agreeing in the "Move data from this device?" prompt links that data to your
+        account and brings it into synchronisation.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="head"><span class="num">04</span><span>Purposes and legal bases</span></h2>
+      <ul>
+        <li>
+          <strong>Providing the service</strong> — running your account, saving results, syncing between
+          devices: Art. 6(1)(b) GDPR (performance of a contract).
+        </li>
+        <li>
+          <strong>Camera and microphone access</strong> — dart detection and voice scoring: Art. 6(1)(a) GDPR
+          (consent given through Android's permission prompt, withdrawable at any time).
+        </li>
+        <li>
+          <strong>Service security</strong> — preventing abuse, handling reports and complaints:
+          Art. 6(1)(f) GDPR (legitimate interests).
+        </li>
+        <li><strong>Statutory obligations</strong> — Art. 6(1)(c) GDPR.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 class="head"><span class="num">05</span><span>Camera</span></h2>
+      <p>
+        The camera is used solely to detect where darts land on the board. The image is analysed on the fly,
+        in device memory, and <strong>never leaves your phone</strong>: frames are not written to persistent
+        storage and do not reach your gallery or the cloud. Only the resulting scores are passed to the app.
+      </p>
+      <p>
+        The permission is optional — the app asks for it only when you first use this feature, and declining
+        does not block anything else. You can withdraw consent in Android settings.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="head"><span class="num">06</span><span>Microphone and speech recognition</span></h2>
+      <p>
+        The microphone lets you call out scores. The app uses Android's built-in speech recognition —
+        <strong>it runs no recognition of its own and records no audio to a file</strong>.
+      </p>
+      <p>
+        This has a consequence we state plainly: on most devices, speech recognition is provided by Google or
+        by the phone's manufacturer, and <strong>that service may send a recording of what you said to its own
+        servers</strong> in order to turn it into text. This happens outside the controller's control and is
+        governed by that provider's privacy policy. Only the recognised text comes back to the app, and the
+        numbers are read from it.
+      </p>
+      <p>
+        If you would rather it did not, don't grant the microphone permission, or withdraw it in system
+        settings, and enter scores by hand. Some devices also allow offline speech recognition, in which case
+        audio never leaves the phone.
+      </p>
+      <p>
+        To check whether speech recognition is available at all, the app queries the system for the presence
+        of such a service. It does not read the list of installed applications or any other device information.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="head"><span class="num">07</span><span>What goes to the cloud and what stays on the device</span></h2>
+      <p>
+        Player profiles and match summaries (the statistics listed in section 2) are uploaded to your cloud account.
+      </p>
+      <p>
+        What stays on the device: the detailed throw-by-throw record of X01 and cricket matches, camera imagery,
+        microphone audio, and app settings. A match downloaded on a second device therefore contains the result
+        and statistics, but not the record of individual visits.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="head"><span class="num">08</span><span>Data recipients</span></h2>
+      <p>
+        Data of users with an account is entrusted to Google Ireland Limited (Gordon House, Barrow Street,
+        Dublin 4, Ireland) and Google LLC under the Firebase Authentication and Cloud Firestore services,
+        acting as processors on the controller's instructions.
+      </p>
+      <p>
+        A separate recipient is the provider of the system speech recognition service (usually Google or your
+        device manufacturer), which processes your speech on its own terms, as an independent controller —
+        see section 6.
+      </p>
+      <p>
+        Data may be transferred outside the European Economic Area on the basis of the standard contractual
+        clauses approved by the European Commission and other mechanisms provided for in Chapter V of the GDPR.
+      </p>
+      <p><strong>Data is never sold or shared for marketing purposes.</strong></p>
+    </section>
+
+    <section>
+      <h2 class="head"><span class="num">09</span><span>Retention</span></h2>
+      <p>
+        Account data and synced data are kept until you delete your account. You can clear match history sooner
+        in <strong>Settings → Data</strong> — deleted matches disappear from the app, and the deletion is passed
+        to the cloud at the next sync so they do not return to your other devices.
+      </p>
+      <p>
+        Data stored only locally (no-account mode) exists for as long as the app is installed. Android's automatic
+        backup is disabled for this app (<code>allowBackup="false"</code>), so its data is not included in your
+        Google account backup.
+      </p>
+      <p>Camera imagery and microphone audio are not retained at all.</p>
+    </section>
+
+    <section>
+      <h2 class="head"><span class="num">10</span><span>Deleting your data</span></h2>
+      <p>
+        <strong>Settings → Account → Delete account</strong> permanently removes your cloud data (player and
+        match documents), wipes the data from your device, and deletes the Firebase Authentication account.
+        The action requires your password and cannot be undone.
+      </p>
+      <p>
+        If you no longer have the app, write to <strong>kontakt@fipex.pl</strong> from the address the account
+        is registered to and we will delete it within 30 days.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="head"><span class="num">11</span><span>Your rights</span></h2>
+      <p>
+        You have the right to access your data, to have it corrected or erased, to restrict processing, to data
+        portability, to object to processing based on legitimate interests, and to withdraw consent at any time —
+        without affecting the lawfulness of processing carried out beforehand.
+      </p>
+      <p>
+        You can exercise most of these rights yourself in the app (editing profiles, clearing history, deleting
+        your account, withdrawing camera and microphone permissions). Otherwise, write to
+        <strong>kontakt@fipex.pl</strong>.
+      </p>
+      <p>
+        You also have the right to lodge a complaint with the President of the Personal Data Protection Office
+        in Poland (ul. Stawki 2, 00-193 Warsaw) or with your local supervisory authority.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="head"><span class="num">12</span><span>Other people's data</span></h2>
+      <p>
+        When you create profiles for opponents and partners, you are entering other people's data. Do so only
+        where you are entitled to, and limit yourself to what is necessary — a name or nickname is enough, and
+        the date of birth is optional. Do not enter special categories of data, such as health information.
+      </p>
+      <p>When pointing the camera at the board, take care not to record bystanders.</p>
+    </section>
+
+    <section>
+      <h2 class="head"><span class="num">13</span><span>Children</span></h2>
+      <p>
+        The app is not directed at children under 16. Anyone below that age may use an account only with the
+        consent and under the supervision of a legal guardian. No-account mode requires no contact details at all.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="head"><span class="num">14</span><span>Security</span></h2>
+      <p>
+        Connections to the cloud are encrypted (TLS). Firestore security rules restrict document access to the
+        account owner alone. Passwords are stored and verified by Firebase Authentication. Local data resides in
+        the app's private directory, inaccessible to other apps.
+      </p>
+      <p>
+        No safeguard offers a hundred-percent guarantee — use a strong, unique password and a screen lock on
+        your device.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="head"><span class="num">15</span><span>App permissions</span></h2>
+      <ul>
+        <li>
+          <strong>Internet</strong> — sign-in, synchronisation and speech recognition. Required only when using
+          an account; no-account mode works offline.
+        </li>
+        <li><strong>Camera</strong> — dart detection on the board (section 5). Optional.</li>
+        <li><strong>Microphone</strong> — voice scoring (section 6). Optional.</li>
+        <li>
+          <strong>Vibration</strong> — haptic feedback on hits and errors; can be turned off in
+          Settings → Sound.
+        </li>
+      </ul>
+      <p>
+        The app requests each permission only when you first use the relevant feature. Declining does not block
+        anything else, and consent once given can be withdrawn at any time in Android settings.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="head"><span class="num">16</span><span>Changes and contact</span></h2>
+      <p>
+        This policy may be updated as the app develops. We will announce significant changes in the app. The
+        current version is always available in Settings and at this address.
+      </p>
+      <p>Data protection contact: <strong>kontakt@fipex.pl</strong>.</p>
+    </section>
+
+  </div>
+
+  <footer>
+    <p data-pl="Dart Route — aplikacja do liczenia i analizy gry w darta." data-en="Dart Route — a scoring and analysis app for darts.">Dart Route — aplikacja do liczenia i analizy gry w darta.</p>
+  </footer>
+
+</div>
+
+<script>
+(function () {
+  var pl = document.getElementById('pl');
+  var en = document.getElementById('en');
+  var bPl = document.getElementById('btn-pl');
+  var bEn = document.getElementById('btn-en');
+
+  function set(lang) {
+    var isPl = lang === 'pl';
+    pl.hidden = !isPl;
+    en.hidden = isPl;
+    bPl.setAttribute('aria-pressed', String(isPl));
+    bEn.setAttribute('aria-pressed', String(!isPl));
+    document.documentElement.lang = lang;
+    document.querySelectorAll('[data-pl]').forEach(function (el) {
+      el.textContent = el.getAttribute(isPl ? 'data-pl' : 'data-en');
+    });
+  }
+
+  bPl.addEventListener('click', function () { set('pl'); });
+  bEn.addEventListener('click', function () { set('en'); });
+
+  if ((navigator.language || '').slice(0, 2) !== 'pl') set('en');
+})();
+</script>
+</body>
+</html>
